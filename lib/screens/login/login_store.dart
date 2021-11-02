@@ -4,21 +4,13 @@ part 'login_store.g.dart';
 class LoginStore = _LoginStoreBase with _$LoginStore;
 
 abstract class _LoginStoreBase with Store {
-  _LoginStoreBase() {
-    autorun((_) {
-      print(isFormValid);
-      print(password);
-      print('loading:$loading');
-    });
-  }
-
   @observable
   bool loading = false;
 
   @action
   void login() {
     loading = true;
-    Future.delayed(Duration(seconds: 2));
+    Future.delayed(const Duration(seconds: 2));
     loading = false;
     isLoggedIn = true;
   }
