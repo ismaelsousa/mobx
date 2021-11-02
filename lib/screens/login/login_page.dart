@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx/mobx.dart';
 import 'package:mobx_test/screens/home/home_page.dart';
 import 'package:mobx_test/screens/login/login_store.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  LoginStore loginStore = LoginStore();
+  late LoginStore loginStore;
 
   late TextEditingController _emailController;
   late TextEditingController _passwordController;
@@ -38,6 +39,8 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+
+    loginStore = Provider.of<LoginStore>(context);
     reactionDisposer = reaction((_) => loginStore.isLoggedIn, (bool loggedIn) {
       if (loggedIn) {
         Navigator.of(context).pushReplacement(

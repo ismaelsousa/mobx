@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_test/screens/home/list_store.dart';
 import 'package:mobx_test/screens/login/login_page.dart';
+import 'package:mobx_test/screens/login/login_store.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -42,6 +44,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       IconButton(
                           onPressed: () {
+                            Provider.of<LoginStore>(context, listen: false)
+                                .loggout();
                             Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                     builder: (_) => const LoginPage()));
