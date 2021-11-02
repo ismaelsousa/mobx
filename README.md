@@ -1,16 +1,17 @@
-# mobx
+# Flutter with MobX
 
-A new Flutter project.
+<p align="center">
+  
+  <img style='width:300px' src='https://user-images.githubusercontent.com/28990749/139871534-337bc4d7-d89d-44b6-a5d8-30cfcb9b7faf.png'/>
+  
+</p>
 
-## Getting Started
+## App basic for todo list
 
-This project is a starting point for a Flutter application.
+Libs used in this project:
+- Mobx
+- Provider
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+https://user-images.githubusercontent.com/28990749/139872313-62a78290-1168-4712-aab7-206c4ac04b4c.mov
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
